@@ -4,7 +4,7 @@ export default function Navbar(props) {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
-				<a className="navbar-brand" href="/home">
+				<a className="navbar-brand badge bg-dark text-light" href="/home">
 					WYR
 				</a>
 

@@ -4,6 +4,7 @@ import '../App.css';
 import handelIntialData from '../actions/shared';
 import Login from './Login';
 import Navbar from './Navbar';
+import Home from './Home';
 
 class App extends Component {
 	componentDidMount() {
@@ -13,7 +14,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Navbar />
-				<Login />
+				<Home />
 			</div>
 		);
 	}

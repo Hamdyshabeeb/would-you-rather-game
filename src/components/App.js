@@ -1,11 +1,27 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
+import handelIntialData from '../actions/shared';
+import Login from './Login';
 
-function App() {
-	return (
-		<div className="App">
-			<h1>Would You Rather</h1>
-		</div>
-	);
+class App extends Component {
+	componentDidMount() {
+		this.props.dispatch(handelIntialData());
+	}
+	render() {
+		console.log(this.props.authenUser);
+		return (
+			<div className="App">
+				<Login />
+			</div>
+		);
+	}
 }
 
-export default App;
+function mapStateToProps({ authenUser }) {
+	return {
+		authenUser,
+	};
+}
+
+export default connect(mapStateToProps)(App);

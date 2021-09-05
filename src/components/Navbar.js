@@ -13,7 +13,7 @@ function Navbar(props) {
 				</a>
 
 				<div className="collapse navbar-collapse" id="navbarText">
-					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+					<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
 						<li className="nav-item">
 							<a className="nav-link active" aria-current="page" href="/home">
 								Home

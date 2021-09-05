@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default function Navbar(props) {
+import Logout from './Logout';
+import { connect } from 'react-redux';
+
+function Navbar(props) {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -27,7 +30,14 @@ export default function Navbar(props) {
 						</li>
 					</ul>
 				</div>
+				{props.authenUser && <Logout />}
 			</div>
 		</nav>
 	);
 }
+function mapStateToProps({ authenUser }) {
+	return {
+		authenUser,
+	};
+}
+export default connect(mapStateToProps)(Navbar);

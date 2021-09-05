@@ -11,10 +11,11 @@ class App extends Component {
 		this.props.dispatch(handelIntialData());
 	}
 	render() {
+		const { authenUser } = this.props;
 		return (
 			<div className="App">
 				<Navbar />
-				<Home />
+				{(authenUser && <Home />) || <Login />}
 			</div>
 		);
 	}

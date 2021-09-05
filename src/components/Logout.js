@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { unSetUthenUser } from '../actions/authenUser';
 
-class Logout extends React.Component {
+class Logout extends Component {
 	onClick = () => {
 		this.props.dispatch(unSetUthenUser());
 	};
@@ -15,9 +15,6 @@ class Logout extends React.Component {
 			</div>
 		);
 	}
-}
-function mapStateToProps() {
-	return {};
 }
 
 export default connect()(Logout);

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Logout from './Logout';
 import { connect } from 'react-redux';
+import LoggedUser from './LoggedUser';
 
 function Navbar(props) {
 	return (
@@ -20,7 +21,7 @@ function Navbar(props) {
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="/dashboard">
-								Dashbord{' '}
+								Dashbord
 							</a>
 						</li>
 						<li className="nav-item">
@@ -30,6 +31,8 @@ function Navbar(props) {
 						</li>
 					</ul>
 				</div>
+				{props.authenUser && <LoggedUser />}
+
 				{props.authenUser && <Logout />}
 			</div>
 		</nav>

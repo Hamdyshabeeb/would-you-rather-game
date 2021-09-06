@@ -32,7 +32,9 @@ class Login extends Component {
 							</option>
 						))}
 					</select>
-					<button className="btn btn-primary mt-4">SUBMIT</button>
+					<button type="submit" className="btn btn-primary mt-4">
+						SUBMIT
+					</button>
 				</form>
 			</div>
 		);

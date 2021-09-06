@@ -14,9 +14,13 @@ class Login extends Component {
 		return (
 			<div className="container">
 				<h3>Please Log In</h3>
-				<form onSubmit={this.onSubmit}>
+				<form
+					className="p-4 mx-auto bg-light shadow-sm mt-4 rounded-3"
+					style={{ maxWidth: '500px', border: '2px solid #ccc' }}
+					onSubmit={this.onSubmit}
+				>
 					<select
-						className="form-select"
+						className="form-select mt-4"
 						ref={(ele) => (this.loggedUser = ele)}
 					>
 						<option defaultChecked value="">
@@ -28,7 +32,7 @@ class Login extends Component {
 							</option>
 						))}
 					</select>
-					<button className="btn btn-primary">SUBMIT</button>
+					<button className="btn btn-primary mt-4">SUBMIT</button>
 				</form>
 			</div>
 		);

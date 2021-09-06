@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link, NavLink } from 'react-router-dom';
 import Logout from './Logout';
 import { connect } from 'react-redux';
 import LoggedUser from './LoggedUser';
@@ -8,26 +8,26 @@ function Navbar(props) {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
-				<a className="navbar-brand badge bg-dark text-light" href="/home">
+				<Link className="navbar-brand badge bg-dark text-light" to="/">
 					WYR
-				</a>
+				</Link>
 
 				<div className="collapse navbar-collapse" id="navbarText">
 					<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
 						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="/home">
+							<NavLink className="nav-link active" aria-current="page" to="/">
 								Home
-							</a>
+							</NavLink>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="/dashboard">
+							<NavLink className="nav-link" to="/dashboard">
 								Dashbord
-							</a>
+							</NavLink>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="/leaderboard">
+							<NavLink className="nav-link" to="/leaderboard">
 								Leaderboard
-							</a>
+							</NavLink>
 						</li>
 					</ul>
 				</div>

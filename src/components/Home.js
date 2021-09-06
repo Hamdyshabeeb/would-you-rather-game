@@ -15,8 +15,11 @@ class Home extends Component {
 		const { unanswered, answered } = this.props;
 		return (
 			<div className="container">
-				<ul className="nav nav-tabs" style={{ maxWidth: '540px' }}>
-					<li className="nav-item">
+				<ul
+					className="nav nav-tabs d-flex mx-auto"
+					style={{ maxWidth: '540px' }}
+				>
+					<li className="nav-item flex-grow-1">
 						<a
 							className={qv === 'unanswered' ? 'nav-link active' : 'nav-link'}
 							href="#unanswered"
@@ -26,7 +29,7 @@ class Home extends Component {
 							Unanswered Questions
 						</a>
 					</li>
-					<li className="nav-item">
+					<li className="nav-item flex-grow-1">
 						<a
 							className={qv === 'answered' ? 'nav-link active' : 'nav-link'}
 							onClick={this.onClick}

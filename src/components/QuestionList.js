@@ -6,7 +6,7 @@ class QuestionList extends Component {
 	render() {
 		const { questions } = this.props;
 		return (
-			<ul className="ps-0">
+			<ul className="ps-0 mx-auto" style={{ maxWidth: '540px' }}>
 				{questions.length > 0 &&
 					questions.map((question) => (
 						<Question key={question} id={question} />

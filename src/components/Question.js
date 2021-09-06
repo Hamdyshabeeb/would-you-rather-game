@@ -8,13 +8,13 @@ class Question extends Component {
 		const { avatarURL, name } = this.props.users[question.author];
 
 		return (
-			<li className="card mb-3" style={{ maxWidth: '540px' }}>
+			<li className="card mb-3">
 				<div className="card-header">{name}</div>
-				<div className="row">
-					<div className="col-md-4">
+				<div className="row" style={{ textAlign: 'left' }}>
+					<div className="col-md-3 d-flex align-items-center ">
 						<img
 							src={avatarURL}
-							className="img-fluid rounded-circle center"
+							className="img-fluid rounded-circle img-thumbnail center"
 							alt={name}
 						/>
 					</div>

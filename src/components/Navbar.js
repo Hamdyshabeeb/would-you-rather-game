@@ -20,7 +20,7 @@ function Navbar(props) {
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/dashboard">
+							<NavLink className="nav-link" to="/add">
 								New Question
 							</NavLink>
 						</li>

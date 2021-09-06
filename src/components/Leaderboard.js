@@ -6,7 +6,7 @@ import UserInfo from './UserInfo';
 function Leaderboard(props) {
 	const { users } = props;
 	return (
-		<div class="container">
+		<div className="container">
 			<ul className="ps-0 mx-auto" style={{ maxWidth: '500px' }}>
 				{users.map((user) => (
 					<UserInfo key={user.id} user={user} />

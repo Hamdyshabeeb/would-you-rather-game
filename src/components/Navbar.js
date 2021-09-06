@@ -6,7 +6,7 @@ import LoggedUser from './LoggedUser';
 
 function Navbar(props) {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+		<nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
 			<div className="container-fluid">
 				<Link className="navbar-brand badge bg-dark text-light" to="/">
 					WYR
@@ -15,13 +15,13 @@ function Navbar(props) {
 				<div className="collapse navbar-collapse" id="navbarText">
 					<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
 						<li className="nav-item">
-							<NavLink className="nav-link active" aria-current="page" to="/">
+							<NavLink exact className="nav-link" to="/">
 								Home
 							</NavLink>
 						</li>
 						<li className="nav-item">
 							<NavLink className="nav-link" to="/dashboard">
-								Dashbord
+								New Question
 							</NavLink>
 						</li>
 						<li className="nav-item">

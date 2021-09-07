@@ -8,3 +8,7 @@ export function getIntialData() {
 		})
 	);
 }
+
+export function saveQuestion(questionDetails) {
+	return _saveQuestion(questionDetails);
+}

@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+
 import { connect } from 'react-redux';
+import { saveNewQuestion } from '../actions/shared';
 
 class NewQuestion extends Component {
 	onSubmit = (e) => {
 		e.preventDefault();
+		const optionOneText = this.option1.value;
+		const optionTwoText = this.option2.value;
+		const { author, dispatch } = this.props;
+		dispatch(saveNewQuestion({ optionOneText, optionTwoText, author }));
+		this.props.history.push('/');
 	};
 	render() {
 		return (
@@ -39,5 +46,9 @@ class NewQuestion extends Component {
 		);
 	}
 }
-
-export default NewQuestion;
+function mapStateToprops({ authenUser }) {
+	return {
+		author: authenUser,
+	};
+}
+export default connect(mapStateToprops)(NewQuestion);
